@@ -1,5 +1,4 @@
-import { Heart } from "lucide-react";
-import churchLogo from "@/assets/church-logo.jpeg";
+import { Heart, Church } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,11 +10,9 @@ const Footer = () => {
           {/* Logo and tagline */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img 
-                src={churchLogo} 
-                alt="Church Logo" 
-                className="h-12 w-12 object-contain"
-              />
+              <div className="w-12 h-12 bg-primary-foreground/10 rounded-full flex items-center justify-center">
+                <Church className="h-6 w-6 text-primary-foreground" />
+              </div>
               <span className="text-xl font-semibold">The Church of Christ</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">

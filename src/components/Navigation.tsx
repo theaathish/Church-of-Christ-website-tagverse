@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, BookOpen, Image, Mail } from "lucide-react";
+import { Home, BookOpen, Image, Mail, Church } from "lucide-react";
 import { cn } from "@/lib/utils";
-import churchLogo from "@/assets/church-logo.jpeg";
 
 const Navigation = () => {
   const location = useLocation();
@@ -18,11 +17,9 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={churchLogo} 
-              alt="Church Logo" 
-              className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-105"
-            />
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-primary/20">
+              <Church className="h-6 w-6 text-primary" />
+            </div>
             <div className="hidden md:block">
               <span className="text-lg font-semibold text-primary">The Church of Christ</span>
             </div>
