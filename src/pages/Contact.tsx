@@ -76,7 +76,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold text-primary mb-2">Email Us</h3>
                     <p className="text-muted-foreground text-sm">
-                      info@churchofchrist.org
+                    pcs.chinna@gmail.com
                     </p>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold text-primary mb-2">Call Us</h3>
                     <p className="text-muted-foreground text-sm">
-                      (555) 123-4567
+                      +91 9052402299
                     </p>
                   </div>
                 </div>
@@ -108,9 +108,12 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold text-primary mb-2">Visit Us</h3>
                     <p className="text-muted-foreground text-sm">
-                      123 Faith Street<br />
-                      Grace City, ST 12345
-                    </p>
+                      Bro. Chinnaraja P<br />
+                      H. No 2, Thanigai Street,<br />
+                      Rajaji Nagar,
+                      Villivakkam,<br />
+                      Chennai - 49
+</p>
                   </div>
                 </div>
               </CardContent>
@@ -169,7 +172,7 @@ const Contact = () => {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="(555) 123-4567"
+                      placeholder="+91 1234567890"
                       value={formData.phone}
                       onChange={handleChange}
                     />

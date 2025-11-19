@@ -1,42 +1,75 @@
-import worshipScene from "@/assets/worship-scene.jpg";
-import prayerBible from "@/assets/prayer-bible.jpg";
-import fellowship from "@/assets/fellowship.jpg";
-import peaceNature from "@/assets/peace-nature.jpg";
-import crossSunrise from "@/assets/cross-sunrise.jpg";
-import covenantCup from "@/assets/covenant-cup.jpeg";
+import newImage1 from "@/assets/Church Event-1.jpeg";
+import newImage2 from "@/assets/Church Event-27.jpeg";
+import newImage3 from "@/assets/Church Event-37.jpeg";
+import newImage4 from "@/assets/Church Event-5.jpeg";
+import newImage5 from "@/assets/Church Event-6.jpeg";
+import newImage6 from "@/assets/Church Event-7.jpeg";
+import newImage7 from "@/assets/Church Event-8.jpeg";
+import newImage8 from "@/assets/Church Event-10.jpeg";
+import newImage9 from "@/assets/Church Event-11.jpeg";
+import newImage10 from "@/assets/Church Event-12.jpeg";
+import newImage11 from "@/assets/Church Event-13.jpeg";
+import newImage12 from "@/assets/Church Event-15.jpeg";
 
 const Gallery = () => {
   const images = [
     {
-      src: worshipScene,
-      alt: "Worship and Communion",
-      caption: "Remembering His sacrifice through worship",
+      src: newImage1,
+      alt: "Gathering for baptism",
+      caption: "Ready for a blessed baptism moment",
     },
     {
-      src: covenantCup,
-      alt: "The Blood of the New Covenant",
-      caption: "The cup of the New Covenant - Matthew 26:28",
-    },
-    {
-      src: prayerBible,
-      alt: "Prayer and Scripture",
-      caption: "Finding truth and guidance in God's Word",
-    },
-    {
-      src: fellowship,
-      alt: "Community Fellowship",
-      caption: "United in love and faith",
-    },
-    {
-      src: crossSunrise,
-      alt: "The Cross at Sunrise",
-      caption: "The hope and light of Christ",
-    },
-    {
-      src: peaceNature,
+      src: newImage2,
       alt: "God's Creation",
       caption: "Peace and beauty in God's creation",
     },
+    {
+      src: newImage3,
+      alt: "Wedding celebration",
+      caption: "Joyful moments in a blessed union",
+    },{
+      src: newImage4,
+      alt: "Baptism taking place in the water",
+      caption: "A blessed moment of baptism",
+    },
+    {
+      src: newImage5,
+      alt: "Baptism taking place in the water",
+      caption: "A blessed moment of baptism",
+    },
+    {
+      src: newImage6,
+      alt: "Baptism taking place in the water",
+      caption: "A blessed moment of baptism",
+    },
+    {
+      src: newImage7,
+      alt: "Church group after baptism",
+      caption: "Sharing joy after a blessed baptism",
+    },{
+      src: newImage8,
+      alt: "God's Creation",
+      caption: "Peace and beauty in God's creation",
+    },
+    {
+      src: newImage9,
+      alt: "Church group assembled before baptism",
+      caption: "A peaceful moment before the baptism",
+    },
+    {
+      src: newImage10,
+      alt: "Baptism taking place in the water",
+      caption: "A blessed moment of baptism",
+    },{
+      src: newImage11,
+      alt: "Church group after baptism",
+      caption: "Sharing joy after a blessed baptism",
+    },
+    {
+      src: newImage12,
+      alt: "God's Creation",
+      caption: "Peace and beauty in God's creation",
+    }
   ];
 
   return (

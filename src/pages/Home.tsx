@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-soft py-20 md:py-32">
+      <section className="relative overflow-hidden bg-gradient-soft py-20 md:py-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6 animate-in fade-in duration-700">
@@ -63,7 +63,7 @@ const Home = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-soft">
+      <section className="py-10 bg-gradient-soft">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-card rounded-xl p-8 shadow-soft hover:shadow-elevated transition-all duration-300">

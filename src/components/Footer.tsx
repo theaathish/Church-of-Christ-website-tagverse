@@ -1,4 +1,5 @@
 import { Heart, Church } from "lucide-react";
+import logo from "../assets/church-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +11,13 @@ const Footer = () => {
           {/* Logo and tagline */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary-foreground/10 rounded-full flex items-center justify-center">
-                <Church className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-semibold">The Church of Christ</span>
+              <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center">
+              <img 
+                src={logo}
+                alt="Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Proclaiming the truth of the New Testament and the love found in the Blood of the New Covenant.
@@ -33,9 +37,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-accent">Connect With Us</h3>
             <div className="space-y-2 text-sm text-primary-foreground/80">
-              <p>Email: info@churchofchrist.org</p>
-              <p>Phone: (555) 123-4567</p>
-              <p>Address: 123 Faith Street<br />Grace City, ST 12345</p>
+              <p>Email: pcs.chinna@gmail.com</p>
+              <p>Phone: +91 9052402299</p>
+              <p>Address: No.2, Thanigai St, Venkateshwara Nagar, Shastri Nagar, Villivakkam, Chennai, Tamil Nadu 600049</p>
             </div>
           </div>
         </div>
