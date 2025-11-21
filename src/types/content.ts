@@ -45,10 +45,22 @@ export interface ContactContent {
 export interface FooterContent {
   churchName: string;
   description: string;
+  foundationHeading: string;
+  scriptureQuote: string;
+  scriptureReference: string;
+  connectHeading: string;
   email: string;
   phone: string;
   address: string;
+  madeWithLoveText: string;
   copyright: string;
+}
+
+export interface MaterialsContent {
+  pageTitle: string;
+  pageDescription: string;
+  scriptureQuote: string;
+  scriptureReference: string;
 }
 
 export interface SiteContent {
@@ -57,5 +69,6 @@ export interface SiteContent {
   about: AboutContent;
   contact: ContactContent;
   footer: FooterContent;
+  materials: MaterialsContent;
   updatedAt: Date;
 }

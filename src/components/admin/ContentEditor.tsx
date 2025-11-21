@@ -12,6 +12,7 @@ import { Loader2, Save, RefreshCw } from "lucide-react";
 import AboutTab from "./content-tabs/AboutTab";
 import ContactTab from "./content-tabs/ContactTab";
 import FooterTab from "./content-tabs/FooterTab";
+import MaterialsTab from "./content-tabs/MaterialsTab";
 
 const ContentEditor = () => {
   const [content, setContent] = useState<SiteContent | null>(null);
@@ -112,10 +113,11 @@ const ContentEditor = () => {
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="home" className="space-y-4">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-5">
               <TabsTrigger value="home">Home</TabsTrigger>
               <TabsTrigger value="about">About</TabsTrigger>
               <TabsTrigger value="contact">Contact</TabsTrigger>
+              <TabsTrigger value="materials">Materials</TabsTrigger>
               <TabsTrigger value="footer">Footer</TabsTrigger>
             </TabsList>
 
@@ -319,6 +321,14 @@ const ContentEditor = () => {
               <ContactTab
                 content={content.contact}
                 onChange={(contact) => setContent({ ...content, contact })}
+              />
+            </TabsContent>
+
+            {/* Materials Content */}
+            <TabsContent value="materials">
+              <MaterialsTab
+                content={content.materials}
+                onChange={(materials) => setContent({ ...content, materials })}
               />
             </TabsContent>
 

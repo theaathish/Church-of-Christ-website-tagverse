@@ -51,10 +51,21 @@ export const defaultContent: SiteContent = {
   footer: {
     churchName: 'The Church of Christ',
     description: 'A community of believers united in Christ, devoted to sharing the gospel and living out the love and grace found in the New Covenant.',
+    foundationHeading: 'Our Foundation',
+    scriptureQuote: 'For this is My blood of the new covenant, which is shed for many for the remission of sins.',
+    scriptureReference: 'Matthew 26:28',
+    connectHeading: 'Connect With Us',
     email: 'pcs.chinna@gmail.com',
     phone: '+91 9052402299',
     address: 'H. No 2, Thanigai Street, Rajaji Nagar, Villivakkam, Chennai - 49',
+    madeWithLoveText: 'Made with ❤️ for the glory of God',
     copyright: '© 2024 The Church of Christ. All rights reserved.',
+  },
+  materials: {
+    pageTitle: 'Materials',
+    pageDescription: 'Books, Bible studies, sermons, and resources for spiritual growth',
+    scriptureQuote: 'Study to show thyself approved unto God, a workman that needeth not to be ashamed, rightly dividing the word of truth.',
+    scriptureReference: '2 Timothy 2:15',
   },
   updatedAt: new Date(),
 };
@@ -76,6 +87,7 @@ export const getSiteContent = async (): Promise<SiteContent> => {
         about: data.about || defaultContent.about,
         contact: data.contact || defaultContent.contact,
         footer: data.footer || defaultContent.footer,
+        materials: data.materials || defaultContent.materials,
         updatedAt: data.updatedAt?.toDate() || new Date(),
       } as SiteContent;
     } else {

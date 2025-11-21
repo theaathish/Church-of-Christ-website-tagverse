@@ -32,6 +32,55 @@ const FooterTab = ({ content, onChange }: FooterTabProps) => {
               onChange={(e) => onChange({ ...content, description: e.target.value })}
             />
           </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Scripture Section</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label>Section Heading</Label>
+            <Input
+              value={content.foundationHeading}
+              onChange={(e) => onChange({ ...content, foundationHeading: e.target.value })}
+              placeholder="Our Foundation"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Scripture Quote</Label>
+            <Textarea
+              rows={2}
+              value={content.scriptureQuote}
+              onChange={(e) => onChange({ ...content, scriptureQuote: e.target.value })}
+              placeholder="For this is My blood..."
+            />
+          </div>
+          <div className="space-y-2">
+            <Label>Scripture Reference</Label>
+            <Input
+              value={content.scriptureReference}
+              onChange={(e) => onChange({ ...content, scriptureReference: e.target.value })}
+              placeholder="Matthew 26:28"
+            />
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Contact Section</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label>Section Heading</Label>
+            <Input
+              value={content.connectHeading}
+              onChange={(e) => onChange({ ...content, connectHeading: e.target.value })}
+              placeholder="Connect With Us"
+            />
+          </div>
           <div className="space-y-2">
             <Label>Email</Label>
             <Input
@@ -49,9 +98,26 @@ const FooterTab = ({ content, onChange }: FooterTabProps) => {
           </div>
           <div className="space-y-2">
             <Label>Address</Label>
-            <Input
+            <Textarea
+              rows={3}
               value={content.address}
               onChange={(e) => onChange({ ...content, address: e.target.value })}
+            />
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Bottom Section</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label>Made With Love Text</Label>
+            <Input
+              value={content.madeWithLoveText}
+              onChange={(e) => onChange({ ...content, madeWithLoveText: e.target.value })}
+              placeholder="Made with ❤️ for the glory of God"
             />
           </div>
           <div className="space-y-2">

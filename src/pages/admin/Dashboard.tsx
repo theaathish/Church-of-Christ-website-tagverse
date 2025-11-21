@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import GalleryManager from "@/components/admin/GalleryManager";
 import ContactMessages from "@/components/admin/ContactMessages";
 import ContentEditor from "@/components/admin/ContentEditor";
+import MaterialsManager from "@/components/admin/MaterialsManager";
 import { LogOut, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -71,9 +72,10 @@ const Dashboard = () => {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="content" className="space-y-6">
-          <TabsList className="grid w-full max-w-2xl grid-cols-3">
+          <TabsList className="grid w-full max-w-3xl grid-cols-4">
             <TabsTrigger value="content">Content</TabsTrigger>
             <TabsTrigger value="gallery">Gallery</TabsTrigger>
+            <TabsTrigger value="materials">Materials</TabsTrigger>
             <TabsTrigger value="messages">Messages</TabsTrigger>
           </TabsList>
 
@@ -83,6 +85,10 @@ const Dashboard = () => {
 
           <TabsContent value="gallery">
             <GalleryManager />
+          </TabsContent>
+
+          <TabsContent value="materials">
+            <MaterialsManager />
           </TabsContent>
 
           <TabsContent value="messages">

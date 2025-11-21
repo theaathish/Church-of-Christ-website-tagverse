@@ -10,9 +10,14 @@ const Footer = () => {
   const footerContent = content?.footer || {
     churchName: "The Church of Christ",
     description: "A community of believers united in Christ",
+    foundationHeading: "Our Foundation",
+    scriptureQuote: "For this is My blood of the new covenant, which is shed for many for the remission of sins.",
+    scriptureReference: "Matthew 26:28",
+    connectHeading: "Connect With Us",
     email: "pcs.chinna@gmail.com",
     phone: "+91 9052402299",
     address: "Chennai, Tamil Nadu",
+    madeWithLoveText: "Made with ❤️ for the glory of God",
     copyright: `© ${currentYear} The Church of Christ. All rights reserved.`,
   };
 
@@ -39,16 +44,22 @@ const Footer = () => {
 
           {/* Scripture */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-accent">Our Foundation</h3>
+            <h3 className="text-lg font-semibold text-accent">
+              {footerContent.foundationHeading || 'Our Foundation'}
+            </h3>
             <blockquote className="text-sm text-primary-foreground/80 italic border-l-2 border-accent pl-4">
-              "For this is My blood of the new covenant, which is shed for many for the remission of sins."
-              <footer className="text-accent font-medium mt-2 not-italic text-xs">— Matthew 26:28</footer>
+              "{footerContent.scriptureQuote || 'For this is My blood of the new covenant, which is shed for many for the remission of sins.'}"
+              <footer className="text-accent font-medium mt-2 not-italic text-xs">
+                — {footerContent.scriptureReference || 'Matthew 26:28'}
+              </footer>
             </blockquote>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-accent">Connect With Us</h3>
+            <h3 className="text-lg font-semibold text-accent">
+              {footerContent.connectHeading || 'Connect With Us'}
+            </h3>
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <p>Email: {footerContent.email}</p>
               <p>Phone: {footerContent.phone}</p>
@@ -59,7 +70,15 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-sm text-primary-foreground/80 flex items-center justify-center gap-2">
-            Made with <Heart className="h-4 w-4 text-accent fill-accent" /> for the glory of God
+            {footerContent.madeWithLoveText && footerContent.madeWithLoveText.includes('❤️') ? (
+              <>
+                {footerContent.madeWithLoveText.split('❤️')[0]}
+                <Heart className="h-4 w-4 text-accent fill-accent" />
+                {footerContent.madeWithLoveText.split('❤️')[1]}
+              </>
+            ) : (
+              footerContent.madeWithLoveText || 'Made with ❤️ for the glory of God'
+            )}
           </p>
           <p className="text-xs text-primary-foreground/60 mt-2">
             {footerContent.copyright}

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
+import Materials from "./pages/Materials";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/admin/Login";
@@ -59,6 +60,18 @@ const App = () => {
                 <Navigation />
                 <main className="flex-grow">
                   <Gallery />
+                </main>
+                <Footer />
+                <WhatsAppButton />
+                <ScrollToTop />
+              </div>
+            } />
+            
+            <Route path="/materials" element={
+              <div className="flex flex-col min-h-screen">
+                <Navigation />
+                <main className="flex-grow">
+                  <Materials />
                 </main>
                 <Footer />
                 <WhatsAppButton />

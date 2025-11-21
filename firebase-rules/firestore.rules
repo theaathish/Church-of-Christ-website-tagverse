@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Gallery collection - public read, admin write
+    match /gallery/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Contacts collection - admin only
+    match /contacts/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Site content collection - public read, admin write
+    match /siteContent/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Materials collection - public read, admin write
+    match /materials/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
