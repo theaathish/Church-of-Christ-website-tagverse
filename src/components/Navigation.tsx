@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, BookOpen, Image, Mail, Church } from "lucide-react";
+import { Home, BookOpen, Image, Mail, Church, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "../assets/church-logo.png";
 
@@ -10,7 +10,7 @@ const Navigation = () => {
     { path: "/", label: "Home", icon: Home },
     { path: "/about", label: "About", icon: BookOpen },
     { path: "/gallery", label: "Gallery", icon: Image },
-    { path: "/materials", label: "Materials", icon: BookOpen },
+    { path: "/materials", label: "Materials", icon: FileText },
     { path: "/contact", label: "Contact", icon: Mail },
   ];
 

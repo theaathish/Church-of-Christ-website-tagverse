@@ -306,6 +306,32 @@ const ContentEditor = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>YouTube Video Section</CardTitle>
+                  <CardDescription>
+                    Add a YouTube video URL (channel, video, or embed link)
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="youtubeVideoUrl">YouTube URL</Label>
+                    <Input
+                      id="youtubeVideoUrl"
+                      value={content.home.youtubeVideoUrl}
+                      onChange={(e) => setContent({
+                        ...content,
+                        home: { ...content.home, youtubeVideoUrl: e.target.value }
+                      })}
+                      placeholder="https://www.youtube.com/@YourChannel or https://www.youtube.com/watch?v=VIDEO_ID"
+                    />
+                    <p className="text-sm text-muted-foreground">
+                      The video will autoplay muted on the home page. Leave empty to hide the video section.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
 
             {/* About Content */}

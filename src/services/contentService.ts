@@ -21,6 +21,7 @@ export const defaultContent: SiteContent = {
     value3Description: 'We are a family in Christ, supporting one another in faith, worship, and service. Together, we grow in love and share His message.',
     ctaTitle: 'Come and Experience God\'s Love',
     ctaDescription: 'Join us in worship, fellowship, and growing together in faith. All are welcome in the family of Christ.',
+    youtubeVideoUrl: 'https://www.youtube.com/@THECHURCHOFCHRISTROMbetween',
   },
   about: {
     title: 'About The Church of Christ',

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Heart, BookOpen, Users, Loader2 } from "lucide-react";
 import worshipScene from "@/assets/worship-scene.jpg";
 import { useSiteContent } from "@/hooks/useSiteContent";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 const Home = () => {
   const { content, loading } = useSiteContent();
@@ -139,6 +140,25 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* YouTube Video Section */}
+      {content.home.youtubeVideoUrl && (
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">
+                  Watch Our Latest Messages
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Subscribe to our YouTube channel for sermons, teachings, and more
+                </p>
+              </div>
+              <YouTubeEmbed url={content.home.youtubeVideoUrl} />
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 };

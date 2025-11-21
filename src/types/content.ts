@@ -12,6 +12,7 @@ export interface HomeContent {
   value3Description: string;
   ctaTitle: string;
   ctaDescription: string;
+  youtubeVideoUrl: string;
 }
 
 export interface AboutContent {
